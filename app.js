@@ -28,7 +28,7 @@ class PhoneRecommender {
         let budget, os, cameraQuality, batteryLife, screenSize;
 
         console.log("Welcome to the Mobile Phone Recommender!");
-        console.log("Please answer the following questions to find your perfect mobile phone.\n");
+        console.log("Please answer the following questions\n");
 
         budget = prompt("What is your budget? (low, medium, high): ").toLowerCase();
         os = prompt("Which operating system do you prefer? (Android, iOS): ").toLowerCase();
@@ -36,7 +36,7 @@ class PhoneRecommender {
         batteryLife = prompt("How important is battery life to you? (short, average, long): ").toLowerCase();
         screenSize = prompt("What screen size do you prefer? (small, medium, large): ").toLowerCase();
 
-        console.log("\nSearching for suitable phones...\n");
+        console.log("\nSearching for  phones...\n");
 
         let recommendedPhones = [];
         for (let i = 0; i < this.phones.length; i++) {
@@ -49,13 +49,13 @@ class PhoneRecommender {
         }
 
         if (recommendedPhones.length > 0) {
-            console.log("We found the following phones that match your preferences:");
+            console.log("phones that match your references:");
             for (let i = 0; i < recommendedPhones.length; i++) {
                 let phone = recommendedPhones[i];
                 console.log(`- ${phone.name} (${phone.os}, Camera: ${phone.cameraQuality}, Battery: ${phone.batteryLife}, Screen: ${phone.screenSize}, Price: $${phone.price})`);
             }
         } else {
-            console.log("Sorry, we couldn't find any phones that match your preferences. Please try adjusting your criteria.");
+            console.log("Sorry");
         }
     }
 }
